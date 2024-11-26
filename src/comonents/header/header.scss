@@ -1,0 +1,32 @@
+.header {
+  padding: 40px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .header__account {
+    display: flex;
+    align-items: center;
+  }
+  .header-account {
+    display: flex;
+  }
+  .favorites-link {
+    display: flex;
+    gap: 20px;
+
+    .link {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        color: #5b5c5c;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+.search-input {
+  background-color: transparent;
+  text-decoration: underline;
+  padding: 5px 3px;
+}
+.autocomplete-search {
+  position: relative;
+  ul {
+    position: absolute;
+    z-index: 888;
+    left: 0;
+    top: 45px;
+    background: #a0ccc7;
+    li {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-bottom: 1px solid #ddd;
+      &:hover {
+        background: #ddd;
+      }
+    }
+
+  }
+}

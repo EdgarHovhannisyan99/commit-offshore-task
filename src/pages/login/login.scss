@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+$primary-color: #2e50eb;
+$facebook-color: #4267b2;
+$google-border-color: #cacaca;
+$google-hover-opacity: 0.8;
+$background-color: #ffffff;
+$text-color: #232836;
+$divider-color: #d4d4d4;
+
+.login-page {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6%;
+}
+
+.login-form-container {
+  width: 80%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  background: $background-color;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  font-size: 28px;
+  font-weight: 600;
+  color: $text-color;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: $divider-color;
+
+  &::before {
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $background-color;
+    color: #8b8b8b;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+
+.media-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.my-facebook-button-class.metro {
+  padding: 5px 25px;
+  font-size: 1.1em;
+  border: none;
+  color: #fff;
+  background: $primary-color;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.media-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  .my-facebook-button-class.metro {
+    background-color: $facebook-color;
+    padding: 12px 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($facebook-color, 10%);
+    }
+  }
+
+  &.facebook {
+    color: #ffffff;
+  }
+
+  &.google {
+    border: 1px solid $google-border-color;
+    color: $text-color;
+    background-color: $background-color;
+
+    .google-img {
+      margin-right: 8px;
+      height: 24px;
+      width: 24px;
+    }
+
+    &:hover {
+      opacity: $google-hover-opacity;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login-form-container {
+    padding: 20px 15px;
+  }
+
+  header {
+    font-size: 24px;
+  }
+}
