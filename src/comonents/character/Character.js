@@ -19,7 +19,7 @@ export default function Character({
     <div
       className="character-box"
       key={index}
-      onClick={(ev) => navigateToPreview(index + 1)}
+      onClick={(ev) => navigateToPreview(character.url)}
     >
       <div onClick={(ev) => handleLike(ev, character.url)} className="favorite-icon">
         <Fab size="small">
