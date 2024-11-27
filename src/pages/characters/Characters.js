@@ -33,7 +33,9 @@ function Characters() {
     dispatch(getCharacters(page));
   }, []);
 
-  const navigateToPreview = (id) => {
+ const navigateToPreview = (url) => {
+    const parts = url.split('/')
+    const id = parts[parts.length - 2]
     navigate(`/characters/${id}`);
   };
 
