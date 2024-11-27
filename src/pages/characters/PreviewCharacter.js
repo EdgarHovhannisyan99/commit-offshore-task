@@ -126,17 +126,15 @@ function PreviewCharacter(props) {
                 />
               </div>
               <div className="preview-info">
-                {character.name && (
                   <form onSubmit={handleSave}>
                     <Input
-                      defaultValue={name || character.name}
+                        value={name}
                       onChange={(ev) => setName(ev.target.value)}
                     />
                     <Button type="submit" disabled={!name} variant="contained">
                       Save
                     </Button>
                   </form>
-                )}
                 <p>
                   <b>Birth Year</b> : {character.birth_year} <br />
                   <b>Height</b> : {character.height} <br />
